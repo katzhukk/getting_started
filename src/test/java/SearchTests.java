@@ -16,6 +16,6 @@ public class SearchTests {//Заголовок нашего скрипта /*н�
 
         open("https://www.google.com/");    /*Открывает гугл*/
         $("[name=q]").setValue("selenide").pressEnter();    /*Вводит в поисковую строку selenide*/
-        $("html").shouldHave(text("https://ru.selenide.org")); /*Проверяет, что selenide появился в рез-тах поиска [id=search] или html*/
+        $("[id=search]").shouldHave(text("https://ru.selenide.org")); /*Проверяет, что selenide появился в рез-тах поиска [id=search] или html*/
     }
 }
