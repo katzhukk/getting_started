@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {//Заголовок нашего скрипта /*не рекомендуется больше 50 тестов*/
 
+    private static String msg = "Mail";
     static {
         Configuration.pageLoadStrategy = "eager";
     }
@@ -15,7 +16,7 @@ public class SearchTests {//Заголовок нашего скрипта /*н�
         //Configuration.holdBrowserOpen = true; //не дает закрыть тесту браузер
 
         open("https://www.yandex.com/");    /*Открывает гугл*/
-        $("[name=q]").setValue("Mail").pressEnter();    /*Вводит в поисковую строку selenide*/
+        $("[name=q]").setValue("msg").pressEnter();    /*Вводит в поисковую строку selenide*/
         $("[id=search]").shouldHave(text("https://ru.selenide.org")); /*Проверяет, что selenide появился в рез-тах поиска [id=search] или html*/
     }
 }
