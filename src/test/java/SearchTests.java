@@ -10,10 +10,6 @@ public class SearchTests {//Заголовок нашего скрипта /*н�
     static {
         Configuration.pageLoadStrategy = "eager";
     }
-
-    private static String getMessage(){
-        return "QA_guru";
-    }
     @Test
     void successfulSearchTest(){    //Успешный поиск в браузере Google Chrome
         //Configuration.holdBrowserOpen = true; //не дает закрыть тесту браузер
