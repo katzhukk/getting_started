@@ -18,7 +18,7 @@ public class SearchTests {//Заголовок нашего скрипта /*н�
     void successfulSearchTest(){    //Успешный поиск в браузере Google Chrome
         //Configuration.holdBrowserOpen = true; //не дает закрыть тесту браузер
 
-        open("https://www.yandex.com/");    /*Открывает гугл*/
+        open("https://www.google.com/");    /*Открывает гугл*/
         $("[name=q]").setValue("msg").pressEnter();    /*Вводит в поисковую строку selenide*/
         $("[id=search]").shouldHave(text("https://ru.selenide.org")); /*Проверяет, что selenide появился в рез-тах поиска [id=search] или html*/
     }
